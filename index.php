@@ -144,7 +144,6 @@
 			.done(function(msg) { if(msg != "false"){ redirect(msg); } else { notify("top", "right", "fa fa-remove", "danger", "&nbsp;&nbsp;&nbsp;ERROR: Invalid Login.");}})
 			.fail(function() {  notify("top", "right", "fa fa-remove", "danger", "&nbsp;&nbsp;&nbsp;ERROR: There was an error contacting the auth server. Please try again.");});
 		}		
-		</script>
-		
+		</script>		
     </body>
 </html>
