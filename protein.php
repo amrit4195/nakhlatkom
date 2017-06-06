@@ -1,7 +1,4 @@
-<?php
-// Include database connection
-require_once('inc/global-connect.inc.php');
-?>
+
 <!DOCTYPE html>
 <html>
 <head>
