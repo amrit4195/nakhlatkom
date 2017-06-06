@@ -109,8 +109,7 @@
 						i = "An unknown error occurred.";
 						break;
 				}
-			}
-	
+			}	
 			function notify(from, align, icon, type, msg, animIn, animOut){
                 $.growl({ icon: icon, message: msg },{
 					element: 'body', 
