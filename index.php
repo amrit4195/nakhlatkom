@@ -1,148 +1,270 @@
-<?php	
-	session_start();
-	
-	if(!isset($_REQUEST['s'])){
-		if($_REQUEST['s'] == "e") {
-			session_destroy();
-			header('Location: ./index.php');
-		} 
-	}	 
-?>
 <!DOCTYPE html>
-<!--[if IE 9 ]><html class="ie9"><![endif]-->
-    <head>
-    	<meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Testing 123</title>
-        <!-- Vendor CSS -->
-        <link href="/dp/vendors/animate.css/animate.min.css" rel="stylesheet">
-        <link href="/dp/vendors/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
-
-        <!-- Dashplus CSS -->
-        <link href="/dp/dist/css/dashplus_1.min.css" rel="stylesheet">
-        <link href="/dp/dist/css/dashplus_2.min.css" rel="stylesheet">
-        
-        <style>
-			.login-content {
-				background-color: #0079ba;
-				background-image: url("https://www.transparenttextures.com/patterns/brushed-alum-dark.png");			
-			}
-			.lc-block {
-				max-width: 400px;
-			}
-			.lcb-form .input-group  {
-				display: inline-block;
-				width: 100%;
-			}
+<html>
+<head>
+<title>Home</title>
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Crops Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //Custom Theme files -->
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script> 
+<!-- //js -->	
+<!-- start-smoth-scrolling-->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>	
+<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+</script>
+<!--//end-smoth-scrolling-->
+</head>
+<body>
+	<!--header-->
+	<div class="logo">
+		<div class="container">
+			<div class="logo-info">
+				<a href="index.html">
+					<h1>Diet OPtimization</h1>	
+					<span class="glyphicon glyphicon-grain" aria-hidden="true"></span>
+				</a>
+			</div>
+		</div>	
+	</div>
+	<!--//header-->		
+	<!--navigation-->
+	<div class="top-nav">
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Menu						
+				</button>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="hvr-bounce-to-bottom active"><a href="index.php">Home</a></li>
+					<li class="hvr-bounce-to-bottom"><a href="deit.php">My Diet</a></li>
+					<li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Food Catalog<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a class="hvr-bounce-to-bottom" href="carbohyrate.php">Carbohydrate</a></li>
+							<li><a class="hvr-bounce-to-bottom" href="fruit.php">Fruit</a></li>
+							<li><a class="hvr-bounce-to-bottom" href="protein.php">Protein</a></li> 
+                            <li><a class="hvr-bounce-to-bottom" href="vegetable.php">Vegatables</a></li>           
+						</ul>
+					</li>	
+					<li class="hvr-bounce-to-bottom"><a href="account.php">My Account</a></li>
+					
+				</ul>	
+				<div class="clearfix"> </div>
+			</div>	
+		</nav>		
+	</div>	
+	<!--//navigation-->
+	<!--baner-->
+	<div class="baner">
+		<div class="container">
+			<div class="baner-grids">
+				<div class="col-md-6 baner-top">
+					<figure class="effect-bubba">
+						<img src="images/carbohydrate1.jpg" alt=""/>
+						<figcaption>
+					    <h4>Carbohydrate</h4>
+							<p>The term is most common in biochemistry, where it is a synonym of 'saccharide', a group that includes sugars, starch, and cellulose.</p>	
+						</figcaption>			
+					</figure>	
+				</div>
+				<div class="col-md-6 baner-top">
+					<figure class="effect-bubba">
+						<img src="images/fruits1.jpg" alt="" />
+						<figcaption>
+					    <h4>Fruits</h4>
+							<p>Fruit normally means the fleshy seed-associated structures of a plant that are sweet or sour, and edible in the raw state.</p>	
+						</figcaption>			
+					</figure>	
+				</div>
+				<div class="clearfix"> </div>
+                <div class="col-md-6 baner-top">
+					<figure class="effect-bubba">
+						<img src="images/protein 2.jpg" alt="" />
+						<figcaption>
+					    <h4>Protein</h4>
+							<p>In animals, amino acids are obtained through the consumption of foods containing protein.  </p>	
+					  </figcaption>			
+				  </figure>	
+				</div>
+                <div class="col-md-6 baner-top">
+					<figure class="effect-bubba">
+						<img src="images/vegetables1.jpg" alt="" />
+						<figcaption>
+					    <h4>Vegetables</h4>
+							<p>Vegetable is any part of a plant that is consumed by humans as food as part of a meal.</p>	
+					  </figcaption>			
+				  </figure>	
+				</div>
+				<!--<div class="baner-row">
+					
+					<div class="clearfix"> </div>
+				</div>		-->		
+			</div>
+		</div>
+	</div>
+	<!--//baner
+    <div class="copyrights">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
+	<!-- news -
+	<div class="news-info">
+		<div class="container">		
+			<h3 class="title">Our News</h3>
+		</div>
+	</div>
+	<!-- container -
+	<div class="container">				
+		<div class="news">	
+			<div class="news-grids">
+				<div class="col-md-4 news-grid">
+					<div class="news-grid-left news-grid-left-img">
+						<h6>23rd /july</h6>
+					</div>
+					<div class="news-grid-left-info">
+						<h5>Lorem Ipsum is simply dummy</h5>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+					</div>
+				</div>
+				<div class="col-md-4 news-grid">
+					<div class="news-grid-left news-grid-middle">
+						<h6>5th /Aug</h6>
+					</div>
+					<div class="news-grid-left-info">
+						<h5>Lorem Ipsum is simply dummy</h5>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+					</div>
+				</div>
+				<div class="col-md-4 news-grid">
+					<div class="news-grid-left news-grid-right">
+						<h6>15th /Aug</h6>
+					</div>
+					<div class="news-grid-left-info">
+						<h5>Lorem Ipsum is simply dummy</h5>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div><!-- //container -->	
+	
+	<!-- //news -->
+	<!--main-
+	<div class="main">
+		<div class="container">
+			<div class="main-grids">
+				<div class="col-md-6 main-left">
+					<img src="images/img6.jpg" alt=""/>
+					<h4>ECO SOLUTIONS</h4>
+					<p>Temporibus autem quibusdam et aut officiis debitis aut
+						rerum necessitatibus saepe eveniet ut et voluptates repudiandae.</p>
+					<a href="#" class="more btn btn-1 btn-1b"> Read More</a>
+				</div>
+				<div class="col-md-6 main-right">
+					<div class="col-md-6 main-text">
+						<img src="images/img7.jpg" alt=""/>
+					</div>
+					<div class="col-md-6 main-text">
+						<h4>ECO SOLUTIONS</h4>			
+						<p>Temporibus autem quibusdam et aut officiis debitis aut eveniet ut et voluptates repudiandae rerum necessitatibus saepe quibusdam et aut officiis debitis aut
+							rerum necessitatibus saepe eveniet ut et voluptates repudiandae </p>
+						<a href="#" class="more btn btn-1 btn-1b"> Read More</a>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>			
+		</div>
+	</div>
+	<!--//main-->
+	<!--services-
+	<div class="services" id="services">
+		<div class="container">
+			<h3 class="title">Services Overview</h3>
+			<div class="service-grids">
+				<div class="col-md-4 srvc-grids-info">
+					<div class="srvc-img">
+						<span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
+					</div>
+					<h5>Ultrices</h5>
+					<p>Claritas est etiam processus dynaicus qui Mirum est notare quam </p>
+				</div>
+				<div class="col-md-4 srvc-grids-info">
+					<div class="srvc-img">
+						<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+					</div>
+					<h5>Tltrices</h5>
+					<p>Claritas est etiam processus dynaicus qui Mirum est notare quam </p>
+				</div>
+				<div class="col-md-4 srvc-grids-info">
+					<div class="srvc-img">
+						<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+					</div>
+					<h5>Cltrices</h5>
+					<p>Claritas est etiam processus dynaicus qui Mirum est notare quam </p>
+				</div>
+				<div class="col-md-4 srvc-grids-info">
+					<div class="srvc-img">
+						<span class="glyphicon glyphicon-grain" aria-hidden="true"></span>
+					</div>
+					<h5>Fltrices</h5>
+					<p>Claritas est etiam processus dynaicus qui Mirum est notare quam </p>
+				</div>
+				<div class="col-md-4 srvc-grids-info">
+					<div class="srvc-img">
+						<span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+					</div>
+					<h5>Processus</h5>
+					<p>Claritas est etiam processus dynaicus qui Mirum est notare quam </p>
+				</div>
+				<div class="col-md-4 srvc-grids-info">
+					<div class="srvc-img">
+						<span class="glyphicon glyphicon-education" aria-hidden="true"></span>
+					</div>
+					<h5>Sequitur</h5>
+					<p>Claritas est etiam processus dynaicus qui Mirum est notare quam </p>
+				</div>
+				<div class="clearfix"> </div>				
+			</div>
+		</div>
+	</div>
+	<!--//services-->
+	<!-- footer -->
+	<?php require_once 'footer.php';?>
+	
+	<!--//footer-->
+	<!--smooth-scrolling-of-move-up-->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+			};
+			*/
 			
-			.lc-block:not(.lc-block-alt) .lcb-form {
-				padding: 35px 55px 35px 55px;
-			}
+			$().UItoTop({ easingType: 'easeOutQuart' });
 			
-			.lcb-form {
-				padding: 35px 55px 35px 55px;
-			}
-			
-			.lc-block .checkbox {
-				margin: 5px 0 0 5px;
-				text-align: left;
-			}
-			.lc-block:not(.toggled) {
-				display: inline-block;
-			}
-		</style>
-    </head>
-    <body>
-        <div class="login-content">
-            <!-- Login -->
-            <div class="lc-block " id="l-login">				
-                <div class="lcb-form">
-				<h3 class="text-center c-grey-800">	<img src="../images/esg_logo_blk.png" width="150" alt="" style="margin-top: -10px;"/></h3>
-                	<h3 class="text-center c-grey-800">Job Management System</h3>		
-					<br />
-                     <div class="input-group m-b-20">
-                        <div class="fg-line">
-                            <input type="text" id ="u" class="form-control" placeholder="Username">
-                        </div>
-                    </div>
-                    <div class="input-group m-b-20">
-                        <div class="fg-line">
-                            <input type="password" id ="p" class="form-control" placeholder="Password">
-                        </div>
-                    </div>
-                  
-                    <div class="input-group m-t-20">
-						<button id="go" class="btn btn-primary btn-lg btn-block waves-effect" onClick="processLogin(); return false;">Sign In</button>                    
-                     </div>
-                     <div class="m-t-20">
-                        <p><a href="#" onClick="notify('top', 'right', 'fa fa-remove', 'danger', '&nbsp;&nbsp;&nbsp;Not available yet, contact admin.'); return false;">Forgot Password?</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Javascript Libraries -->
-        <script src="/dp/vendors/jquery/dist/jquery.min.js"></script>
-        <script src="/dp/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="/dp/vendors/Waves/dist/waves.min.js"></script>
-        <script src="/dp/dist/js/dashplus.min.js"></script>
-		<script src="/dp/vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
-		<script>		 
-			window.addEventListener("load",function() { getLoc(); });	
-			window.addEventListener("keypress", function(event) { if (event.keyCode == 13) { processLogin();}});
-			
-			var x=0; var y=0; var i="-"; 
-			function getLoc() { navigator.geolocation.getCurrentPosition(function(location) { x = location.coords.latitude; y = location.coords.longitude; }); }			
-			function showError(error) {
-				switch(error.code) {
-					case error.PERMISSION_DENIED:
-						i = "User denied the request for Geolocation.";
-						break;
-					case error.POSITION_UNAVAILABLE:
-						i = "Location information is unavailable.";
-						break;
-					case error.TIMEOUT:
-						i = "The request to get user location timed out.";
-						break;
-					case error.UNKNOWN_ERROR:
-						i = "An unknown error occurred.";
-						break;
-				}
-			}	
-			function notify(from, align, icon, type, msg, animIn, animOut){
-                $.growl({ icon: icon, message: msg },{
-					element: 'body', 
-					type: type, 
-					allow_dismiss: true,
-					placement: { from: from, align: align },
-					offset: { x: 20,y: 85 },
-					spacing: 10,
-					z_index: 1031,
-					delay: 2500,
-					timer: 1000,
-					url_target: '_blank',
-					mouse_over: false,
-					animate: { enter: animIn, exit: animOut },
-					icon_type: 'class',
-					template: '<div data-growl="container" class="alert alert-bordered" role="alert">' +
-									'<button type="button" class="close" data-growl="dismiss">' +
-										'<span aria-hidden="true">&times;</span>' +
-										'<span class="sr-only">Close</span>' +
-									'</button>' +
-									'<span data-growl="icon"></span>' +
-									'<span data-growl="title"></span>' +
-									'<span data-growl="message"></span>' +
-									'<a href="#" data-growl="url"></a>' +
-								'</div>'
-				});
-            };
-			
-			function redirect(u) { window.location = u; } 
-			function processLogin(){ $.post("./login/login.php", { u: $("#u").val(), p: $("#p").val(), x: x, y: y, i: i})
-			.done(function(msg) { if(msg != "false"){ redirect(msg); } else { notify("top", "right", "fa fa-remove", "danger", "&nbsp;&nbsp;&nbsp;ERROR: Invalid Login.");}})
-			.fail(function() {  notify("top", "right", "fa fa-remove", "danger", "&nbsp;&nbsp;&nbsp;ERROR: There was an error contacting the auth server. Please try again.");});
-		}		
-		</script>		
-    </body>
+		});
+	</script>
+	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	<!--//smooth-scrolling-of-move-up-->
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.js"></script>
+</body>
 </html>
