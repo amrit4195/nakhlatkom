@@ -6,7 +6,7 @@
 			session_destroy();
 			header('Location: ./index.php');
 		}
-	}	
+	}	 
 ?>
 <!DOCTYPE html>
 <!--[if IE 9 ]><html class="ie9"><![endif]-->
