@@ -137,7 +137,8 @@
 									'<a href="#" data-growl="url"></a>' +
 								'</div>'
 				});
-            };					
+            };
+			
 			function redirect(u) { window.location = u; } 
 			function processLogin(){ $.post("./login/login.php", { u: $("#u").val(), p: $("#p").val(), x: x, y: y, i: i})
 			.done(function(msg) { if(msg != "false"){ redirect(msg); } else { notify("top", "right", "fa fa-remove", "danger", "&nbsp;&nbsp;&nbsp;ERROR: Invalid Login.");}})
