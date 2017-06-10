@@ -2,8 +2,8 @@
 	error_reporting(E_ERROR);
 	$username = "amrit4195";	
 	$password = "amrit4195";
-	$database = "nakhlatkomdb";
-	$host = "nakhlatkomdb.cprfc4zdvxkh.us-east-2.rds.amazonaws.com";
+	$database = "sydneynakhlatkom";
+	$host = "sydneynakhlatkom.ccx7gtfezsye.ap-southeast-2.rds.amazonaws.com";
 	$port = "3306";
 		
 	$connection=mysql_connect ($host, $username, $password);
