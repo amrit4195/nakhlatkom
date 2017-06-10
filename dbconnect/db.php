@@ -10,7 +10,8 @@
 	if (!$connection) { die('Error1: ' . mysql_error()); }
 	
 	$db_selected = mysql_select_db($database, $connection);
-	if (!$db_selected) { die ('Error2: ' . mysql_error()); }	
+	if (!$db_selected) { die ('Error2: ' . mysql_error()); }
+		else { echo("Test2 Pass");}
 	
 	function hasRows($res) { return (mysql_num_rows($res) != 0); }
 ?>
