@@ -7,10 +7,10 @@
 	$port = "3306";
 		
 	$connection=mysql_connect ($host, $username, $password);
-	if (!$connection) { die('Error: ' . mysql_error()); }
+	if (!$connection) { die('Error1: ' . mysql_error()); }
 	
 	$db_selected = mysql_select_db($database, $connection);
-	if (!$db_selected) { die ('Error: ' . mysql_error()); }	
+	if (!$db_selected) { die ('Error2: ' . mysql_error()); }	
 	
 	function hasRows($res) { return (mysql_num_rows($res) != 0); }
 ?>
