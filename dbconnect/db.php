@@ -2,7 +2,7 @@
 	error_reporting(E_ERROR);
 	$username = "amrit4195";	
 	$password = "amrit4195";
-	$database = "sydneynakhlatkom";
+	$database = "SydneyNakhlatkom";
 	$host = "sydneynakhlatkom.ccx7gtfezsye.ap-southeast-2.rds.amazonaws.com";
 	$port = "3306";
 		
