@@ -1,14 +1,13 @@
 <template>
   <div class="page_content">
-    <div class="rec_one_home">
-      <p style="display: inline-block;color:#404040;">Sign up</p>
-      <p style="display: inline-block; margin-left:3%;color:#404040;">Create account</p>
-      <p style="display: inline-block; margin-left:50%;color:#404040;">Contact</p>
-    </div>
-    <img src="../assets/home/logo.jpg" style="width:150px;height:auto;position:absolute;left:80px; top:50px;">
-    <div style="padding-top:50px;">
-      <el-select v-model="select_search_category" filterable placeholder="category" style="width:12%;">
-        <el-input v-model="search_data"></el-input>
+    <img style="cursor:not-allowed" src="../assets/home/logo.jpg" id="logo">
+    <div style="padding-top:50px;margin-left:3%;">
+      <el-select v-model="select_search_category" placeholder="category" style="width:12%;">
+        <el-option v-for="sc in show_category"
+            :key="sc.value"
+            :label="sc.label"
+            :value="sc.value">
+          </el-option>
       </el-select>
       <el-input placeholder="I am looking for..." v-model="search_data" style="width:50%;">
         <el-button slot="append" icon="search"></el-button>
@@ -35,6 +34,7 @@
     <br><br>
     <img src="../assets/home/test2.jpg" style="width:80%; height:300px; border: 3px solid; border-color: #d9d9d9;">
   </div>
+  <br>
   <div class="rec_two_home">
     <br>
     <p>Footer</p>
@@ -46,9 +46,17 @@
 export default {
   data () {
     return {
+      // user access (log in)
+      user_access: null,
       select_search_category: null,
+      show_category: [{value:'1', label: 'All Categories'}, {value:'1', label: 'Antiques'}, {value:'1', label: 'Art'}],
       search_data: null,
       user_select_mid_category: 'first'
+    }
+  },
+  mounted () {
+    if (localStorage.getItem('user_access') !== null && localStorage.getItem('user_access') !== undefined) {
+      this.user_access = localStorage.getItem('user_access')
     }
   },
   methods: {
@@ -59,16 +67,16 @@ export default {
 }
 </script>
 <style scoped>
-.rec_one_home{
-  background-color:  #f2f2f2;
-  width:100%;
-  height: 50px;
-  top:0;
-  left:0;
-  position: absolute;
+#logo{
+  width:150px;
+  height:auto;
+  position:absolute;
+  left:7%;
+  top:50px;
 }
+
 .rec_two_home{
-  background-color:  #f2f2f2;
+  background-color:  #e6e6e6;
   width:100%;
   height: 120px;
   bottom:0;
@@ -90,8 +98,21 @@ export default {
 .el-carousel__item:nth-child(2n+1) {
   background-color: #d3dce6;
 }
+@media screen and (min-width:1500px) {
+  #logo{
+    left:9%
+  }
+}
 </style>
 <style>
+.rec_one_home{
+  background-color:  #f2f2f2;
+  width:100%;
+  height: 50px;
+  top:0;
+  left:0;
+  position: absolute;
+}
 .page_content{
   color:#4d4d4d;
   font-family: Source Han Sans;
